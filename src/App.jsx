@@ -2,7 +2,57 @@ import logo from './assets/logo.png'
 import logo2 from './assets/logo2.jpg'
 import pakistan from './assets/pakistan.png'
 import karachi from './assets/karachi.webp'
+import carwithremote from './assets/carwithremote.png'
+import inspection from './assets/carinspaction.png'
+import insurance from './assets/carinsurance.png'
+import auction from './assets/sellbilding.png'
 import './App.css'
+
+const cardsData = [
+  {
+    id: 1,
+    title: "Sell Your Car",
+    description: "Easiest way to sell your car at the best price.",
+    image: carwithremote,
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "Car Inspection",
+    description: "Get a detailed car inspection report at the comfort of your home.",
+    image: inspection,
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Car Insurance",
+    description: "Get reliable car insurance and drive worry-free.",
+    image: insurance,
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "Sell Through Live Bidding",
+    description: "Join our live auction platform and get the best price for your car.",
+    image: auction,
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "Sell Through Famewheels",
+    description: "Dedicated Sales Expert to Sell your Car. We Bargain for you",
+    image: carwithremote,
+    link: "#",
+  },
+  {
+    id: 6,
+    title: "Car Finance",
+    description: "FameWheels proudly offers premier Financing services in Pakistan.",
+    image: auction,
+    link: "#",
+  },
+
+];
 
 
 function App() {
@@ -86,28 +136,35 @@ function App() {
 
       </div>
 
-      {/* <div>
-        <a
-          href="#"
-          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <img
-            className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="/docs/images/blog/image-4.jpg"
-            alt=""
-          />
-          <div className="flex flex-col justify-between p-4 leading-normal">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so far, in
-              reverse chronological order.
-            </p>
-          </div>
-        </a>
+      {/* cards */}
 
-      </div> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 px-10">
+        {
+          cardsData.map((data) => (
+            <a
+              href="#"
+              className="flex flex-col sm:flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+            >
+              <img
+                className="sm:w-[33.33333333%] sm:h-10 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                src={data.image}
+                alt=""
+              />
+              <div className="flex flex-col justify-between p-4 leading-normal">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {data.title}
+                </h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  {data.description}
+                  
+                </p>
+                  
+              </div>
+            </a>
+          ))
+        }
+
+      </div>
     </>
 
   )
