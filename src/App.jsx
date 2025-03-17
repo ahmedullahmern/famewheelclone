@@ -21,6 +21,20 @@ import dfsk from './assets/dfsklogo.png'
 import mg from './assets/mglogo.png'
 import audi from './assets/audilogo.png'
 import faw from './assets/fawlogo.png'
+import blackcar from './assets/blackcar.png'
+import searchbluecar from './assets/searchbluecar.png'
+import karachiIcon from './assets/karachiicon.png'
+import faislabadIcon from './assets/faislabadicon.png'
+import sukhurIcon from './assets/sukhuricon.png'
+import sahiwalIcon from './assets/sahiwalicon.png'
+import lahoreIcon from './assets/lahoreicon.png'
+import islamabadIcon from './assets/islamabadicon.png'
+import bhawalpurIcon from './assets/bhawalpuricon.png'
+import hyderabadIcon from './assets/hyderabadicon.png'
+import multanIcon from './assets/multanicon.png'
+import quttaIcon from './assets/queetaicon.png'
+import peshawerIcon from './assets/peshawericon.png'
+import sialkotIcon from './assets/sialkoticon.png'
 import './App.css'
 
 const cardsData = [
@@ -86,6 +100,21 @@ const cardsLogoData = [
   { image: faw, title: "FAW" },
 ];
 
+const cityIcons = [
+  { image: karachiIcon, title: "Karachi" },
+  { image: faislabadIcon, title: "Faislabad" },
+  { image: sukhurIcon, title: "Sukkur" },
+  { image: sahiwalIcon, title: "Sahiwal" },
+  { image: lahoreIcon, title: "Lahore" },
+  { image: islamabadIcon, title: "Islamabad" },
+  { image: bhawalpurIcon, title: "Bahawalpur" },
+  { image: hyderabadIcon, title: "Hyderabad" },
+  { image: multanIcon, title: "Multan" },
+  { image: quttaIcon, title: "Quetta" },
+  { image: peshawerIcon, title: "Peshawar" },
+  { image: sialkotIcon, title: "Sialkot" },
+];
+
 
 function App() {
 
@@ -109,11 +138,11 @@ function App() {
 
         <div className="mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
           <div className="flex justify-between items-center max-w-7xl mx-auto">
-            {/* Logo */}
-            <img src={logo} alt="Logo" className="h-[40px] object-contain" />
+        {/* Logo */}
+        <img src={logo} alt="Logo" className="h-[40px] object-contain" />
 
-            {/* Navigation Links */}
-            <ul className="flex space-x-6 text-white font-semibold">
+        {/* Navigation Links */}
+        <ul className="flex space-x-6 text-white font-semibold">
               <li className="cursor-pointer hover:text-red-500">Used Cars</li>
               <li className="cursor-pointer hover:text-red-500">New Cars</li>
               <li className="cursor-pointer hover:text-red-500">Bikes</li>
@@ -123,8 +152,8 @@ function App() {
               <li className="cursor-pointer hover:text-red-500">More</li>
             </ul>
 
-            {/* Post Ad Button */}
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
+        {/* Post Ad Button */}
+        <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
               Post Your Ad
             </button>
           </div>
@@ -215,7 +244,41 @@ function App() {
         ))}
       </div>
 
-      
+
+      {/* black car */}
+      <div className='bg-[#1a1a1a] mt-30'>
+        <div style={{ backgroundImage: `url(${blackcar})` }}
+          className="relative h-[500px] bg-cover bg-center" >
+          <div className='flex justify-center items-center'>
+            <h1 className='text-white text-3xl font-black  mt-10'>
+              FameWheels Car suggest
+            </h1>
+          </div>
+          <div className='bg-white/20 backdrop-blur-md z-50  flex justify-center items-center ml-30 rounded-2xl mt-6 0 0 w-7xl h-[340px] '>
+            <div className='flex items-center gap-[550px]'>
+              <div className='flex-col text-white'>
+                <h6 className='text-2xl'>Not Sure,</h6>
+                <h1 className='font-black text-4xl'>Which car to buy?</h1>
+                <p>Let us help you find the dream car</p>
+              </div>
+              <img src={searchbluecar} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* city icon */}
+
+      <h1 className='flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Used Cars by Category</h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-10 px-10">
+        {cityIcons.map((data, index) => (
+          <div key={index} className="bg-white shadow-md rounded-lg flex flex-col items-center p-4">
+            <img className="w-20 h-20 object-contain" src={data.image} alt={data.title} />
+            <p className="mt-2 text-gray-700 font-medium text-center">{data.title}</p>
+          </div>
+        ))}
+      </div>
+
     </>
 
   )
