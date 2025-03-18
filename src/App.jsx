@@ -35,6 +35,17 @@ import multanIcon from './assets/multanicon.png'
 import quttaIcon from './assets/queetaicon.png'
 import peshawerIcon from './assets/peshawericon.png'
 import sialkotIcon from './assets/sialkoticon.png'
+import carollaCarImag from './assets/toyotacarollaimg.jpg'
+import nissanCarImg from './assets/nissanleafimg.jpg'
+import civicCarImg from './assets/civicimg.jpg'
+import markXCarImg from './assets/markximg.jpg'
+import hondaCity1CarImg from './assets/hondacityimg.jpg'
+import yarisCarImg from './assets/toyotayarisimg.jpg'
+import peouguCarImg from './assets/peugocarimg.jpg'
+import hondaCity2CarImg from './assets/hondacity2.jpg'
+import carollaCarImag2 from './assets/toyotacarollabalck.jpg'
+import toyotaIqCarImg from './assets/totoytaiqimg.jpg'
+
 import './App.css'
 
 const cardsData = [
@@ -115,6 +126,68 @@ const cityIcons = [
   { image: sialkotIcon, title: "Sialkot" },
 ];
 
+const FeaturedCarData = [
+  {
+    image: carollaCarImag,
+    title: "Toyota Corolla 2022",
+    price: "PKR 56 lacs",
+    location: "Karachi",
+  },
+  {
+    image: nissanCarImg,
+    title: "Nissan Leaf 2021",
+    price: "PKR 73 lacs",
+    location: "Karachi",
+  },
+  {
+    image: civicCarImg,
+    title: "Honda Civic 2018",
+    price: "PKR 48.25 lacs",
+    location: "Karachi",
+  },
+  {
+    image: markXCarImg,
+    title: "Toyota Mark X 2005",
+    price: "Call for price",
+    location: "Karachi",
+  },
+  {
+    image: hondaCity1CarImg,
+    title: "Honda City 2013",
+    price: "Call for price",
+    location: "Karachi",
+  },
+  {
+    image: yarisCarImg,
+    title: "Toyota Yaris 2021",
+    price: "PKR 46.5 lacs",
+    location: "Karachi",
+  },
+  {
+    image: peouguCarImg,
+    title: "Peugeot 2008 2023",
+    price: "PKR 66 lacs",
+    location: "Karachi",
+  },
+  {
+    image: hondaCity2CarImg,
+    title: "Honda City 2021",
+    price: "PKR 42 lacs",
+    location: "Karachi",
+  },
+  {
+    image: carollaCarImag2,
+    title: "Toyota Corolla 2021",
+    price: "Call for price",
+    location: "Karachi",
+  },
+  {
+    image: toyotaIqCarImg,
+    title: "Toyota IQ 2008",
+    price: "Call for price",
+    location: "Karachi",
+  },
+];
 
 function App() {
 
@@ -136,13 +209,13 @@ function App() {
 
         {/* tarnsparent header */}
 
-        <div className="mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
-          <div className="flex justify-between items-center max-w-7xl mx-auto">
+        {/* <div className="mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
+          <div className="flex justify-between items-center max-w-7xl mx-auto"> */}
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-[40px] object-contain" />
+        {/* <img src={logo} alt="Logo" className="h-[40px] object-contain" /> */}
 
         {/* Navigation Links */}
-        <ul className="flex space-x-6 text-white font-semibold">
+        {/* <ul className="flex space-x-6 text-white font-semibold">
               <li className="cursor-pointer hover:text-red-500">Used Cars</li>
               <li className="cursor-pointer hover:text-red-500">New Cars</li>
               <li className="cursor-pointer hover:text-red-500">Bikes</li>
@@ -150,14 +223,14 @@ function App() {
               <li className="cursor-pointer hover:text-red-500">Bidding</li>
               <li className="cursor-pointer hover:text-red-500">Blog</li>
               <li className="cursor-pointer hover:text-red-500">More</li>
-            </ul>
+            </ul> */}
 
         {/* Post Ad Button */}
-        <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
+        {/* <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
               Post Your Ad
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* hero section */}
 
@@ -278,6 +351,26 @@ function App() {
           </div>
         ))}
       </div>
+
+      {/* featured car*/}
+
+      <div className="text-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
+        {FeaturedCarData.map((car, index) => (
+          <div key={index} className="gap-10 bg-gray-200 border rounded-lg shadow-md p-3">
+            <img
+              src={car.image}
+              alt={car.title}
+              className="w-full h-32 object-cover rounded-lg"
+            />
+            <div className='items-center bg-white border rounded-lg shadow-md p-3'>
+              <h5 className="text-md font-bold mt-2">{car.title}</h5>
+              <p className="text-sm text-gray-600">{car.price}</p>
+              <p className="text-sm text-red-500">{car.location}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
 
     </>
 
