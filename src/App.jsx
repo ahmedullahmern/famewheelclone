@@ -45,6 +45,12 @@ import peouguCarImg from './assets/peugocarimg.jpg'
 import hondaCity2CarImg from './assets/hondacity2.jpg'
 import carollaCarImag2 from './assets/toyotacarollabalck.jpg'
 import toyotaIqCarImg from './assets/totoytaiqimg.jpg'
+import carwithmobile from './assets/carwithmobile.png'
+import bankalfalah from './assets/bankalfalah.png'
+import bankalhabib from './assets/al-habib.png'
+import jazzcash from './assets/jazzcash.png'
+import nbp from './assets/nbp.png'
+import payfast from './assets/PayFast.png'
 
 import './App.css'
 
@@ -189,17 +195,35 @@ const FeaturedCarData = [
   },
 ];
 
+const payment = [
+  {
+    image: jazzcash
+  },
+  {
+    image: payfast
+  },
+  {
+    image: bankalfalah
+  },
+  {
+    image: bankalhabib
+  },
+  {
+    image: nbp
+  },
+]
+
 function App() {
 
   return (
-    <>
+    <div className="">
 
       {/* top header */}
       <div style={{ backgroundImage: `url(${karachi})` }} className="relative h-[530px] bg-cover bg-center" >
-
+        {/* black shadow */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/75"></div>
 
-        <div className='w-[90%] ml-20 items-center  relative z-10 flex justify-between p-2 text-white'>
+        <div className='container mx-auto px-4 w-[90%] ml-20 items-center  relative z-10 flex justify-between p-2 text-white'>
           <div className='flex items-center gap-2'>
             <img className='h-[16px]' src={pakistan} />
             <h5 className='text-18px text-white font-medium'>Pakistan</h5>
@@ -209,7 +233,7 @@ function App() {
 
         {/* tarnsparent header */}
 
-        {/* <div className="mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
+        {/* <div className=" mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
           <div className="flex justify-between items-center max-w-7xl mx-auto"> */}
         {/* Logo */}
         {/* <img src={logo} alt="Logo" className="h-[40px] object-contain" /> */}
@@ -277,7 +301,7 @@ function App() {
 
       {/* cards */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 px-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
         {
           cardsData.map((data) => (
             <a
@@ -307,8 +331,8 @@ function App() {
 
       {/* // logo cards */}
 
-      <h1 className='flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Cars by Make</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 mt-10 px-10">
+      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Cars by Make</h1>
+      <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 mt-10">
         {cardsLogoData.map((data, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg flex flex-col items-center p-4">
             <img className="w-20 h-20 object-contain" src={data.image} alt={data.title} />
@@ -327,7 +351,7 @@ function App() {
               FameWheels Car suggest
             </h1>
           </div>
-          <div className='bg-white/20 backdrop-blur-md z-50  flex justify-center items-center ml-30 rounded-2xl mt-6 0 0 w-7xl h-[340px] '>
+          <div className=' bg-white/20 backdrop-blur-md z-50  flex justify-center items-center ml-45 rounded-2xl mt-6 0 0 w-7xl h-[340px] '>
             <div className='flex items-center gap-[550px]'>
               <div className='flex-col text-white'>
                 <h6 className='text-2xl'>Not Sure,</h6>
@@ -342,8 +366,8 @@ function App() {
 
       {/* city icon */}
 
-      <h1 className='flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Used Cars by Category</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-10 px-10">
+      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Used Cars by Category</h1>
+      <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-10">
         {cityIcons.map((data, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg flex flex-col items-center p-4">
             <img className="w-20 h-20 object-contain" src={data.image} alt={data.title} />
@@ -354,16 +378,17 @@ function App() {
 
       {/* featured car*/}
 
-      <div className="text-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
+      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-5 0 1 2 '>Featured Used Cars</h1>
+      <div className="container mx-auto px-4 text-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
         {FeaturedCarData.map((car, index) => (
-          <div key={index} className="gap-10 bg-gray-200 border rounded-lg shadow-md p-3">
+          <div key={index} className="gap-10 bg-gray-100 border rounded-lg shadow-md p-3">
             <img
               src={car.image}
               alt={car.title}
               className="w-full h-32 object-cover rounded-lg"
             />
-            <div className='items-center bg-white border rounded-lg shadow-md p-3'>
-              <h5 className="text-md font-bold mt-2">{car.title}</h5>
+            <div className='items-center mt-2 bg-white border rounded-lg shadow-md p-3'>
+              <h5 className="text-black text-md font-bold mt-2">{car.title}</h5>
               <p className="text-sm text-gray-600">{car.price}</p>
               <p className="text-sm text-red-500">{car.location}</p>
             </div>
@@ -372,10 +397,45 @@ function App() {
       </div>
 
 
-    </>
+      {/* carwithmobile*/}
+      <div className='bg-gray-100  h-[450px] mt-20'>
+        <div className='border border-gray-300 gap-[300px] bg-white w-[80%] h-[450px] flex justify-center items-center rounded-2xl ml-45'>
+          <div className='flex-col text-black '>
+            <h1 className='font-bold text-4xl'>Famewheels Car Inspection</h1>
+            <p className='mt-5 text-gray-500'>Get a professional and reliable car inspection service with FameWheels across <br /> major cities like Karachi, Lahore, and Islamabad. Your trusted partner for used car <br />  evaluations in Pakistan.</p>
+            <button className='mt-6 font-medium bg-red-500 rounded-md px-5 py-3 text-white'>GET YOUR CAR INSPECTED</button>
+          </div>
+          <div className='w-[400px]'>
+            <img src={carwithmobile} />
+          </div>
+        </div>
+      </div>
+
+      {/* Borwser Video */}
+      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Cars by Make</h1>
+      <div className='container mx-auto px-4 flex justify-center items-center gap-10' >
+        <iframe width="361" height="642" src="https://www.youtube.com/embed/jziuHVZC5N8" title="Place your bid now &amp; drive your dream car. #BidToWin #DreamCar #FameWheels" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="361" height="642" src="https://www.youtube.com/embed/8u4GO1-Xa54" title="Buy or Sell Your Dream Car in Minutes!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="361" height="642" src="https://www.youtube.com/embed/l8eXjui_wAg" title="Expert Car Inspections for a Safer Drive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="361" height="642" src="https://www.youtube.com/embed/8Xmbz5VQjzs" title="Dealers, It’s Time to Bid &amp; Win!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Used Cars by Category</h1>
+      <div className="container mx-auto px-4 grid items-center w-10 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-9 mt-10 mb-50">
+        {payment.map((data, index) => (
+          <div key={index} className="bg-gray-200 shadow-md rounded-lg flex flex-col justify-center items-center">
+            <img className="w-20 h-20 object-contain" src={data.image} alt={data.title} />
+          </div>
+        ))}
+      </div>
+
+
+    </div>
+
 
   )
 }
 
 
 export default App
+
