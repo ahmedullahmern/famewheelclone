@@ -28,7 +28,7 @@ import faislabadIcon from './assets/faislabadicon.png'
 import sukhurIcon from './assets/sukhuricon.png'
 import sahiwalIcon from './assets/sahiwalicon.png'
 import lahoreIcon from './assets/lahoreicon.png'
-import islamabadIcon from './assets/islamabadicon.png'
+import islamabadIcon from "./assets/Islamabadicon.png"
 import bhawalpurIcon from './assets/bhawalpuricon.png'
 import hyderabadIcon from './assets/hyderabadicon.png'
 import multanIcon from './assets/multanicon.png'
@@ -469,7 +469,7 @@ function App() {
 
       <div
         style={{ backgroundImage: `url(${gradient})` }}
-        className="relative h-44 mb-30 bg-cover bg-center flex justify-around items-center text-white px-6"
+        className="relative h-44 bg-cover bg-center flex justify-around items-center text-white px-6"
       >
         {gardientIcon.map((data, index) => (
           <div key={index} className="flex flex-col items-center text-center">
@@ -481,9 +481,9 @@ function App() {
       </div>
 
 
-      <div className="bg-gray-100 py-10 px-6">
+      {/* <div className="bg-gray-100 py-10 px-6"> */}
         {/* Newsletter Section */}
-        <div className="flex justify-around items-center  max-w-5xl mx-auto text-center bg-white p-6 rounded-lg shadow">
+        {/* <div className="flex justify-around items-center  max-w-5xl mx-auto text-center bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-black">
             Subscribe to our <span className="text-red-600">Newsletter</span>
           </h2>
@@ -497,12 +497,12 @@ function App() {
               Subscribe
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Footer Links */}
-        <div className="max-w-6xl mx-auto mt-10 grid grid-cols-4 gap-6 text-gray-700">
+        {/* <div className="max-w-6xl mx-auto mt-10 grid grid-cols-4 gap-6 text-gray-700"> */}
           {/* Column 1 */}
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold mb-2">Company</h3>
             <ul className="space-y-1 text-sm">
               <li>About Us</li>
@@ -513,10 +513,10 @@ function App() {
               <li>Refund Policy</li>
               <li>Subscribe To Live Bidding</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Column 2 */}
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold mb-2">Cars By Make</h3>
             <ul className="space-y-1 text-sm">
               <li>Jetour Cars For Sale</li>
@@ -527,10 +527,10 @@ function App() {
               <li>KIA Cars For Sale</li>
               <li>Hyundai Cars For Sale</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Column 3 */}
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold mb-2">Cars By Cities</h3>
             <ul className="space-y-1 text-sm">
               <li>Cars In Karachi</li>
@@ -540,10 +540,10 @@ function App() {
               <li>Cars In Quetta</li>
               <li>Cars In Multan</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Column 4 */}
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold mb-2">Sell On FameWheels</h3>
             <ul className="space-y-1 text-sm">
               <li>Sell On FameWheels</li>
@@ -552,7 +552,7 @@ function App() {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 
