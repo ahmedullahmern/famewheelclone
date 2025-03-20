@@ -51,6 +51,11 @@ import bankalhabib from './assets/al-habib.png'
 import jazzcash from './assets/jazzcash.png'
 import nbp from './assets/nbp.png'
 import payfast from './assets/PayFast.png'
+import gradient from './assets/gradent.png'
+import gmedal from './assets/gradentmedal.png'
+import gcardollar from './assets/gcardollar.png'
+import gtag from './assets/goffertag.png'
+import gcompare from './assets/gcarcompare.png'
 
 import './App.css'
 
@@ -213,6 +218,30 @@ const payment = [
   },
 ]
 
+
+const gardientIcon = [
+  {
+    image: gmedal,
+    title: "Pakistan’s No 1",
+    desc: "Live Bidding Portal"
+  },
+  {
+    image: gcardollar,
+    title: "Car Sold",
+    desc: "Every 15 Minutes"
+  },
+  {
+    image: gtag,
+    title: "Offers",
+    desc: "Stay updated pay less"
+  },
+  {
+    image: gcompare,
+    title: "Compare",
+    desc: "Decode the right car"
+  },
+]
+
 function App() {
 
   return (
@@ -233,13 +262,13 @@ function App() {
 
         {/* tarnsparent header */}
 
-        {/* <div className=" mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
-          <div className="flex justify-between items-center max-w-7xl mx-auto"> */}
-        {/* Logo */}
-        {/* <img src={logo} alt="Logo" className="h-[40px] object-contain" /> */}
+        <div className=" mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
+          <div className="flex justify-between items-center max-w-7xl mx-auto">
+            {/* Logo */}
+            <img src={logo} alt="Logo" className="h-[40px] object-contain" />
 
-        {/* Navigation Links */}
-        {/* <ul className="flex space-x-6 text-white font-semibold">
+            {/* Navigation Links */}
+            <ul className="flex space-x-6 text-white font-semibold">
               <li className="cursor-pointer hover:text-red-500">Used Cars</li>
               <li className="cursor-pointer hover:text-red-500">New Cars</li>
               <li className="cursor-pointer hover:text-red-500">Bikes</li>
@@ -247,14 +276,14 @@ function App() {
               <li className="cursor-pointer hover:text-red-500">Bidding</li>
               <li className="cursor-pointer hover:text-red-500">Blog</li>
               <li className="cursor-pointer hover:text-red-500">More</li>
-            </ul> */}
+            </ul>
 
-        {/* Post Ad Button */}
-        {/* <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
+            {/* Post Ad Button */}
+            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
               Post Your Ad
             </button>
           </div>
-        </div> */}
+        </div>
 
         {/* hero section */}
 
@@ -412,7 +441,7 @@ function App() {
       </div>
 
       {/* Borwser Video */}
-      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Cars by Make</h1>
+      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Our Videos</h1>
       <div className='container mx-auto px-4 flex justify-center items-center gap-10' >
         <iframe width="361" height="642" src="https://www.youtube.com/embed/jziuHVZC5N8" title="Place your bid now &amp; drive your dream car. #BidToWin #DreamCar #FameWheels" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <iframe width="361" height="642" src="https://www.youtube.com/embed/8u4GO1-Xa54" title="Buy or Sell Your Dream Car in Minutes!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -420,14 +449,111 @@ function App() {
         <iframe width="361" height="642" src="https://www.youtube.com/embed/8Xmbz5VQjzs" title="Dealers, It’s Time to Bid &amp; Win!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
-      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Used Cars by Category</h1>
-      <div className="container mx-auto px-4 grid items-center w-10 grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-9 mt-10 mb-50">
+      {/* our payment method */}
+
+      <h1 className="container mx-auto px-4 text-left font-bold text-3xl py-5 mt-10">
+        Our Payment Partners
+      </h1>
+      <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-5 mb-20">
         {payment.map((data, index) => (
-          <div key={index} className="bg-gray-200 shadow-md rounded-lg flex flex-col justify-center items-center">
-            <img className="w-20 h-20 object-contain" src={data.image} alt={data.title} />
+          <div
+            key={index}
+            className="bg-gray-100 shadow-lg rounded-2xl flex flex-col items-center justify-center p-6 w-32 h-32 md:w-40 md:h-40"
+          >
+            <img className="w-20 h-20 md:w-24 md:h-24 object-contain" src={data.image} alt={data.title} />
           </div>
         ))}
       </div>
+
+      {/* gradient */}
+
+      <div
+        style={{ backgroundImage: `url(${gradient})` }}
+        className="relative h-44 mb-30 bg-cover bg-center flex justify-around items-center text-white px-6"
+      >
+        {gardientIcon.map((data, index) => (
+          <div key={index} className="flex flex-col items-center text-center">
+            <img className="w-[70px] h-[70px] mb-2" src={data.image} alt="icon" />
+            <h1 className="text-lg font-bold">{data.title}</h1>
+            <p className="text-sm">{data.desc}</p>
+          </div>
+        ))}
+      </div>
+
+
+      <div className="bg-gray-100 py-10 px-6">
+        {/* Newsletter Section */}
+        <div className="flex justify-around items-center  max-w-5xl mx-auto text-center bg-white p-6 rounded-lg shadow">
+          <h2 className="text-2xl font-black">
+            Subscribe to our <span className="text-red-600">Newsletter</span>
+          </h2>
+          <div className="mt-4 flex justify-center shadow-1xl">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              className="border border-gray-300 p-3 rounded-l-lg w-72 focus:outline-none"
+            />
+            <button className="bg-red-600 text-white px-6 py-3 rounded-r-lg font-semibold">
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        {/* Footer Links */}
+        <div className="max-w-6xl mx-auto mt-10 grid grid-cols-4 gap-6 text-gray-700">
+          {/* Column 1 */}
+          <div>
+            <h3 className="text-2xl font-bold mb-2">Company</h3>
+            <ul className="space-y-1 text-sm">
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>FAQ’s</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Refund Policy</li>
+              <li>Subscribe To Live Bidding</li>
+            </ul>
+          </div>
+
+          {/* Column 2 */}
+          <div>
+            <h3 className="text-2xl font-bold mb-2">Cars By Make</h3>
+            <ul className="space-y-1 text-sm">
+              <li>Jetour Cars For Sale</li>
+              <li>Toyota Cars For Sale</li>
+              <li>Suzuki Cars For Sale</li>
+              <li>Honda Cars For Sale</li>
+              <li>Daihatsu Cars For Sale</li>
+              <li>KIA Cars For Sale</li>
+              <li>Hyundai Cars For Sale</li>
+            </ul>
+          </div>
+
+          {/* Column 3 */}
+          <div>
+            <h3 className="text-2xl font-bold mb-2">Cars By Cities</h3>
+            <ul className="space-y-1 text-sm">
+              <li>Cars In Karachi</li>
+              <li>Cars In Lahore</li>
+              <li>Cars In Faisalabad</li>
+              <li>Cars In Islamabad</li>
+              <li>Cars In Quetta</li>
+              <li>Cars In Multan</li>
+            </ul>
+          </div>
+
+          {/* Column 4 */}
+          <div>
+            <h3 className="text-2xl font-bold mb-2">Sell On FameWheels</h3>
+            <ul className="space-y-1 text-sm">
+              <li>Sell On FameWheels</li>
+              <li>Sell To FameWheels</li>
+              <li>Become A Member</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
 
 
     </div>
