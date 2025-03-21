@@ -428,7 +428,7 @@ function App() {
 
       {/* carwithmobile*/}
       <div className='bg-gray-100  h-[450px] mt-20'>
-        <div className='border border-gray-300 gap-[300px] bg-white w-[80%] h-[450px] flex justify-center items-center rounded-2xl ml-45'>
+        <div className='border border-gray-300 gap-[100px] bg-white w-[80%] h-[450px] flex justify-center items-center rounded-2xl ml-45'>
           <div className='flex-col text-black '>
             <h1 className='font-bold text-4xl'>Famewheels Car Inspection</h1>
             <p className='mt-5 text-gray-500'>Get a professional and reliable car inspection service with FameWheels across <br /> major cities like Karachi, Lahore, and Islamabad. Your trusted partner for used car <br />  evaluations in Pakistan.</p>
@@ -450,19 +450,20 @@ function App() {
       </div>
 
       {/* our payment method */}
-
-      <h1 className="container mx-auto px-4 text-left font-bold text-3xl py-5 mt-10">
-        Our Payment Partners
-      </h1>
-      <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-5 mb-20">
-        {payment.map((data, index) => (
-          <div
-            key={index}
-            className="bg-gray-100 shadow-lg rounded-2xl flex flex-col items-center justify-center p-6 w-32 h-32 md:w-40 md:h-40"
-          >
-            <img className="w-20 h-20 md:w-24 md:h-24 object-contain" src={data.image} alt={data.title} />
-          </div>
-        ))}
+      <div className='container mx-auto px-4'>
+        <h1 className="container mx-auto px-4 text-left font-bold text-3xl py-5 mt-10">
+          Our Payment Partners
+        </h1>
+        <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-5 mb-20">
+          {payment.map((data, index) => (
+            <div
+              key={index}
+              className="ml-20 bg-gray-100 shadow-lg rounded-2xl flex flex-col items-center justify-center p-6 w-32 h-32 md:w-40 md:h-40"
+            >
+              <img className="w-20 h-20 md:w-24 md:h-24 object-contain" src={data.image} alt={data.title} />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* gradient */}
@@ -481,9 +482,9 @@ function App() {
       </div>
 
 
-      {/* <div className="bg-gray-100 py-10 px-6"> */}
+      <div className="bg-gray-100 py-10 px-6">
         {/* Newsletter Section */}
-        {/* <div className="flex justify-around items-center  max-w-5xl mx-auto text-center bg-white p-6 rounded-lg shadow">
+        <div className="flex justify-around items-center  max-w-5xl mx-auto text-center bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-black">
             Subscribe to our <span className="text-red-600">Newsletter</span>
           </h2>
@@ -497,12 +498,12 @@ function App() {
               Subscribe
             </button>
           </div>
-        </div> */}
+        </div>
 
         {/* Footer Links */}
-        {/* <div className="max-w-6xl mx-auto mt-10 grid grid-cols-4 gap-6 text-gray-700"> */}
+        <div className="max-w-6xl mx-auto mt-10 grid grid-cols-4 gap-6 text-gray-700">
           {/* Column 1 */}
-          {/* <div>
+          <div>
             <h3 className="text-2xl font-bold mb-2">Company</h3>
             <ul className="space-y-1 text-sm">
               <li>About Us</li>
@@ -513,10 +514,10 @@ function App() {
               <li>Refund Policy</li>
               <li>Subscribe To Live Bidding</li>
             </ul>
-          </div> */}
+          </div>
 
           {/* Column 2 */}
-          {/* <div>
+          <div>
             <h3 className="text-2xl font-bold mb-2">Cars By Make</h3>
             <ul className="space-y-1 text-sm">
               <li>Jetour Cars For Sale</li>
@@ -527,10 +528,10 @@ function App() {
               <li>KIA Cars For Sale</li>
               <li>Hyundai Cars For Sale</li>
             </ul>
-          </div> */}
+          </div>
 
           {/* Column 3 */}
-          {/* <div>
+          <div>
             <h3 className="text-2xl font-bold mb-2">Cars By Cities</h3>
             <ul className="space-y-1 text-sm">
               <li>Cars In Karachi</li>
@@ -540,10 +541,10 @@ function App() {
               <li>Cars In Quetta</li>
               <li>Cars In Multan</li>
             </ul>
-          </div> */}
+          </div>
 
           {/* Column 4 */}
-          {/* <div>
+          <div>
             <h3 className="text-2xl font-bold mb-2">Sell On FameWheels</h3>
             <ul className="space-y-1 text-sm">
               <li>Sell On FameWheels</li>
@@ -552,7 +553,7 @@ function App() {
             </ul>
           </div>
         </div>
-      </div> */}
+      </div>
 
 
 
