@@ -248,6 +248,7 @@ function App() {
     <div className="">
 
       {/* top header */}
+
       <div style={{ backgroundImage: `url(${karachi})` }} className="relative h-[530px] bg-cover bg-center" >
         {/* black shadow */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/75"></div>
@@ -261,28 +262,50 @@ function App() {
         </div>
 
         {/* tarnsparent header */}
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
+          {/* <div className=" mt-12 fixed top-0 left-0 flex justify-between items-center max-w-9xl mx-auto px-10 bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]"> */}
+          <div className=" mt-12 ml-20 fixed top-0 left-0 w-[90%]  bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
+            <div className="flex justify-between items-center max-w-7xl mx-auto">
+              {/* Logo */}
+              <img src={logo} alt="Logo" className="h-[40px] object-contain" />
 
-        <div className=" mt-12 ml-20 fixed top-0 left-0 w-[90%] bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
-          <div className="flex justify-between items-center max-w-7xl mx-auto">
-            {/* Logo */}
-            <img src={logo} alt="Logo" className="h-[40px] object-contain" />
+              {/* Navigation Links */}
+              <ul className="flex space-x-6 text-white font-semibold">
+                <li className="cursor-pointer hover:text-red-500">Used Cars</li>
+                <li className="cursor-pointer hover:text-red-500">New Cars</li>
+                <li className="cursor-pointer hover:text-red-500">Bikes</li>
+                <li className="cursor-pointer hover:text-red-500">Inspection</li>
+                <li className="cursor-pointer hover:text-red-500">Bidding</li>
+                <li className="cursor-pointer hover:text-red-500">Blog</li>
+                <li className="cursor-pointer hover:text-red-500">More</li>
+              </ul>
 
-            {/* Navigation Links */}
-            <ul className="flex space-x-6 text-white font-semibold">
-              <li className="cursor-pointer hover:text-red-500">Used Cars</li>
-              <li className="cursor-pointer hover:text-red-500">New Cars</li>
-              <li className="cursor-pointer hover:text-red-500">Bikes</li>
-              <li className="cursor-pointer hover:text-red-500">Inspection</li>
-              <li className="cursor-pointer hover:text-red-500">Bidding</li>
-              <li className="cursor-pointer hover:text-red-500">Blog</li>
-              <li className="cursor-pointer hover:text-red-500">More</li>
-            </ul>
-
-            {/* Post Ad Button */}
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
-              Post Your Ad
-            </button>
+              {/* Post Ad Button */}
+              <button className="bg-red-600 hover:bg-red-700  text-white  px-6 py-2 rounded-3xl sm:text-blue-400">
+                Post Your Ad
+              </button>
+            </div>
           </div>
+
+          {/* <div className="flex justify-between items-center max-w-7xl mx-auto px-4"> */}
+          {/* Logo */}
+          {/* <img src={logo} alt="Logo" className="h-[40px] object-contain" /> */}
+
+          {/* Navigation Links */}
+          {/* <ul className="hidden md:flex space-x-6 text-white font-semibold">
+            <li className="cursor-pointer hover:text-red-500">Used Cars</li>
+            <li className="cursor-pointer hover:text-red-500">New Cars</li>
+            <li className="cursor-pointer hover:text-red-500">Bikes</li>
+            <li className="cursor-pointer hover:text-red-500">Inspection</li>
+            <li className="cursor-pointer hover:text-red-500">Bidding</li>
+            <li className="cursor-pointer hover:text-red-500">Blog</li>
+            <li className="cursor-pointer hover:text-red-500">More</li>
+          </ul> */}
+
+          {/* Post Ad Button */}
+          {/* <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
+            Post Your Ad
+          </button>*/}
         </div>
 
         {/* hero section */}
@@ -326,11 +349,11 @@ function App() {
           </div>
         </div>
 
-      </div>
+      </div >
 
       {/* cards */}
 
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+      < div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20" >
         {
           cardsData.map((data) => (
             <a
@@ -356,11 +379,11 @@ function App() {
           ))
         }
 
-      </div>
+      </div >
 
       {/* // logo cards */}
 
-      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Cars by Make</h1>
+      < h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 ' > Browse Cars by Make</h1 >
       <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 mt-10">
         {cardsLogoData.map((data, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg flex flex-col items-center p-4">
@@ -441,13 +464,31 @@ function App() {
       </div>
 
       {/* Borwser Video */}
-      <h1 className='container mx-auto px-4 flex justify-start font-bold text-3xl p-5 m-10 0 5 5 '>Browse Our Videos</h1>
-      <div className='container mx-auto px-4 flex justify-center items-center gap-10' >
-        <iframe width="361" height="642" src="https://www.youtube.com/embed/jziuHVZC5N8" title="Place your bid now &amp; drive your dream car. #BidToWin #DreamCar #FameWheels" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="361" height="642" src="https://www.youtube.com/embed/8u4GO1-Xa54" title="Buy or Sell Your Dream Car in Minutes!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="361" height="642" src="https://www.youtube.com/embed/l8eXjui_wAg" title="Expert Car Inspections for a Safer Drive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="361" height="642" src="https://www.youtube.com/embed/8Xmbz5VQjzs" title="Dealers, It’s Time to Bid &amp; Win!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h1 className="container mx-auto px-4 flex justify-start font-bold text-3xl p-5">Browse Our Videos</h1>
+
+      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <iframe className="w-full h-[250px] md:h-[350px] lg:h-[400px]"
+          src="https://www.youtube.com/embed/jziuHVZC5N8"
+          title="Place your bid now &amp; drive your dream car."
+          frameBorder="0" allowFullScreen></iframe>
+
+        <iframe className="w-full h-[250px] md:h-[350px] lg:h-[400px]"
+          src="https://www.youtube.com/embed/8u4GO1-Xa54"
+          title="Buy or Sell Your Dream Car in Minutes!"
+          frameBorder="0" allowFullScreen></iframe>
+
+        <iframe className="w-full h-[250px] md:h-[350px] lg:h-[400px]"
+          src="https://www.youtube.com/embed/l8eXjui_wAg"
+          title="Expert Car Inspections for a Safer Drive"
+          frameBorder="0" allowFullScreen></iframe>
+
+        <iframe className="w-full h-[250px] md:h-[350px] lg:h-[400px]"
+          src="https://www.youtube.com/embed/8Xmbz5VQjzs"
+          title="Dealers, It’s Time to Bid &amp; Win!"
+          frameBorder="0" allowFullScreen></iframe>
       </div>
+
+
 
       {/* our payment method */}
       <div className='container mx-auto px-4'>
@@ -557,7 +598,7 @@ function App() {
 
 
 
-    </div>
+    </div >
 
 
   )
