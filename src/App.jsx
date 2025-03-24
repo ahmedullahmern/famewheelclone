@@ -253,24 +253,24 @@ function App() {
         {/* black shadow */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/75"></div>
 
-        <div className='container mx-auto px-4 w-[90%] ml-20 items-center  relative z-10 flex justify-between p-2 text-white'>
+        <div className='container mx-auto px-8 md:px-20 w-full items-center relative z-10 flex justify-between p-2 text-white'>
           <div className='flex items-center gap-2'>
             <img className='h-[16px]' src={pakistan} />
-            <h5 className='text-18px text-white font-medium'>Pakistan</h5>
+            <h5 className='text-[18px] text-white font-medium'>Pakistan</h5>
           </div>
           <button>Login</button>
         </div>
 
-        {/* tarnsparent header */}
-        <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
-          {/* <div className=" mt-12 fixed top-0 left-0 flex justify-between items-center max-w-9xl mx-auto px-10 bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]"> */}
-          <div className=" mt-12 ml-20 fixed top-0 left-0 w-[90%]  bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
-            <div className="flex justify-between items-center max-w-7xl mx-auto">
-              {/* Logo */}
-              <img src={logo} alt="Logo" className="h-[40px] object-contain" />
 
-              {/* Navigation Links */}
-              <ul className="flex space-x-6 text-white font-semibold">
+        {/* tarnsparent header */}
+        {/* <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
+          <div className=" mt-12 ml-20 fixed top-0 left-0 w-[90%]  bg-white/20 backdrop-blur-md z-50 p-5 rounded-[50px_50px_0_50px]">
+            <div className="flex justify-between items-center max-w-7xl mx-auto"> */}
+        {/* Logo */}
+        {/* <img src={logo} alt="Logo" className="h-[40px] object-contain" /> */}
+
+        {/* Navigation Links */}
+        {/* <ul className="flex space-x-6 text-white font-semibold">
                 <li className="cursor-pointer hover:text-red-500">Used Cars</li>
                 <li className="cursor-pointer hover:text-red-500">New Cars</li>
                 <li className="cursor-pointer hover:text-red-500">Bikes</li>
@@ -278,82 +278,59 @@ function App() {
                 <li className="cursor-pointer hover:text-red-500">Bidding</li>
                 <li className="cursor-pointer hover:text-red-500">Blog</li>
                 <li className="cursor-pointer hover:text-red-500">More</li>
-              </ul>
+              </ul> */}
 
-              {/* Post Ad Button */}
-              <button className="bg-red-600 hover:bg-red-700  text-white  px-6 py-2 rounded-3xl sm:text-blue-400">
+        {/* Post Ad Button */}
+        {/* <button className="bg-red-600 hover:bg-red-700  text-white  px-6 py-2 rounded-3xl sm:text-blue-400">
                 Post Your Ad
               </button>
             </div>
-          </div>
-
-          {/* <div className="flex justify-between items-center max-w-7xl mx-auto px-4"> */}
-          {/* Logo */}
-          {/* <img src={logo} alt="Logo" className="h-[40px] object-contain" /> */}
-
-          {/* Navigation Links */}
-          {/* <ul className="hidden md:flex space-x-6 text-white font-semibold">
-            <li className="cursor-pointer hover:text-red-500">Used Cars</li>
-            <li className="cursor-pointer hover:text-red-500">New Cars</li>
-            <li className="cursor-pointer hover:text-red-500">Bikes</li>
-            <li className="cursor-pointer hover:text-red-500">Inspection</li>
-            <li className="cursor-pointer hover:text-red-500">Bidding</li>
-            <li className="cursor-pointer hover:text-red-500">Blog</li>
-            <li className="cursor-pointer hover:text-red-500">More</li>
-          </ul> */}
-
-          {/* Post Ad Button */}
-          {/* <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-3xl">
-            Post Your Ad
-          </button>*/}
-        </div>
+          </div> */}
 
         {/* hero section */}
 
-        <div className="relative z-10 flex justify-center items-center mt-40">
-          <div className="">
-            <h1 className='text-5xl font-bold text-white'>Discover, Buy & Sell Cars in Pakistan</h1>
-            <div className='flex justify-center items-center mt-7'>
-              <p className='font-medium text-2xl text-[#F8F9fA]'>Smart Choices, Smooth Rides – Your Trusted Platform</p>
+        <div className="relative flex justify-center items-center mt-40 px-4 text-center">
+          <div className="max-w-[90%] z-10 sm:max-w-[80%] md:max-w-[70%]">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              Discover, Buy & Sell Cars in Pakistan
+            </h1>
+            <div className="flex justify-center items-center mt-4">
+              <p className="font-medium text-sm sm:text-lg md:text-xl lg:text-2xl text-[#F8F9FA]">
+                Smart Choices, Smooth Rides – Your Trusted Platform
+              </p>
             </div>
           </div>
         </div>
 
+
         {/* search box */}
-
-        <div className="flex justify-center items-center mt-44">
-          {/* Search Box Container */}
-          <div className="w-[80%] z-10 flex items-center justify-around bg-white p-4 rounded-md shadow-lg gap-4">
-
-            {/* Input Fields */}
+        {/* <div className="flex justify-center items-center mt-44 z-10 px-4">
+          <div className="w-full max-w-3xl bg-white p-4 rounded-md shadow-lg flex flex-col md:flex-row items-center gap-4">
             <input
               type="text"
               placeholder="Select Make"
-              className="border border-gray-300 px-3 py-1.5 rounded-md outline-none w-[400px]"
+              className="border border-gray-300 px-3 py-2 rounded-md outline-none w-full md:w-[40%]"
             />
             <input
               type="text"
               placeholder="Select City"
-              className="border border-gray-300 px-3 py-1.5 rounded-md outline-none w-[400px]"
+              className="border border-gray-300 px-3 py-2 rounded-md outline-none w-full md:w-[40%]"
             />
-
-            {/* Buttons */}
-            <div className="flex gap-2">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-5 py-1 rounded-md">
+            <div className="flex w-full md:w-auto gap-2">
+              <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md w-full md:w-auto">
                 Search
               </button>
-              <button className="border border-gray-500 hover:bg-gray-600  hover:text-white text-gray-700 px-6 py-2 rounded-md">
+              <button className="border border-gray-500 hover:bg-gray-600 hover:text-white text-gray-700 px-4 py-2 rounded-md w-full md:w-auto">
                 Advance Search
               </button>
             </div>
           </div>
-        </div>
-
-      </div >
+        </div> */}
+      </div>
 
       {/* cards */}
 
-      < div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20" >
+      < div className="container mx-auto px-4 grid  grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20" >
         {
           cardsData.map((data) => (
             <a
@@ -361,7 +338,7 @@ function App() {
               className="flex flex-col sm:flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
               <img
-                className="sm:w-[33.33333333%] sm:h-10 object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                className="w-full sm:w-1/3 md:w-1/3 lg:w-1/3 h-auto rounded-t-lg object-contain"
                 src={data.image}
                 alt=""
               />
@@ -395,26 +372,28 @@ function App() {
 
 
       {/* black car */}
-      <div className='bg-[#1a1a1a] mt-30'>
+
+      <div className="bg-[#1a1a1a] mt-30">
         <div style={{ backgroundImage: `url(${blackcar})` }}
-          className="relative h-[500px] bg-cover bg-center" >
-          <div className='flex justify-center items-center'>
-            <h1 className='text-white text-3xl font-black  mt-10'>
-              FameWheels Car suggest
-            </h1>
-          </div>
-          <div className=' bg-white/20 backdrop-blur-md z-50  flex justify-center items-center ml-45 rounded-2xl mt-6 0 0 w-7xl h-[340px] '>
-            <div className='flex items-center gap-[550px]'>
-              <div className='flex-col text-white'>
-                <h6 className='text-2xl'>Not Sure,</h6>
-                <h1 className='font-black text-4xl'>Which car to buy?</h1>
-                <p>Let us help you find the dream car</p>
-              </div>
-              <img src={searchbluecar} />
+          className="relative h-[500px] bg-cover bg-center flex flex-col items-center">
+          <h1 className="text-white text-3xl font-black mt-10 text-center">
+            FameWheels Car Suggest
+          </h1>
+          <div className="container mx-auto px-6 sm:px-10 bg-white/20 backdrop-blur-md z-50 flex flex-col lg:flex-row justify-between items-center rounded-2xl mt-6 max-w-[90%] sm:max-w-[80%] h-auto md:h-[340px] p-6 gap-10 lg:gap-16">
+            <div className="text-white text-center lg:text-left w-full lg:w-1/2">
+              <h6 className="text-sm sm:text-lg md:text-xl lg:text-2xl">Not Sure,</h6>
+              <h1 className="font-medium text-2xl sm:text-3xl md:text-4xl">Which car to buy?</h1>
+              <p className="text-sm sm:text-base mt-2">Let us help you find the dream car</p>
+            </div>
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <img className="w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] object-contain" src={searchbluecar} alt="Search Car" />
             </div>
           </div>
         </div>
       </div>
+
+
+
 
       {/* city icon */}
 
@@ -450,23 +429,34 @@ function App() {
 
 
       {/* carwithmobile*/}
-      <div className='bg-gray-100  h-[450px] mt-20'>
-        <div className='border border-gray-300 gap-[100px] bg-white w-[80%] h-[450px] flex justify-center items-center rounded-2xl ml-45'>
-          <div className='flex-col text-black '>
-            <h1 className='font-bold text-4xl'>Famewheels Car Inspection</h1>
-            <p className='mt-5 text-gray-500'>Get a professional and reliable car inspection service with FameWheels across <br /> major cities like Karachi, Lahore, and Islamabad. Your trusted partner for used car <br />  evaluations in Pakistan.</p>
-            <button className='mt-6 font-medium bg-red-500 rounded-md px-5 py-3 text-white'>GET YOUR CAR INSPECTED</button>
+
+      <div className="bg-gray-100 flex py-10 sm:py-0 md:py-0 lg:py-0 justify-center mt-20">
+        <div className="border border-gray-300 bg-white w-[90%] sm:w-[80%] flex flex-col md:flex-row justify-center items-center gap-10 lg:gap-24 rounded-2xl p-5">
+
+          <div className="flex flex-col text-black text-center md:text-left w-full md:w-1/2">
+            <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl">
+              Famewheels Car Inspection
+            </h1>
+            <p className="mt-5 text-gray-500 text-sm sm:text-base leading-relaxed">
+              Get a professional and reliable car inspection service with FameWheels across
+              major cities like Karachi, Lahore, and Islamabad. Your trusted partner for used car
+              evaluations in Pakistan.
+            </p>
+            <button className="mt-6 font-medium bg-red-500 rounded-md  px-5 py-3 text-white">
+              GET YOUR CAR INSPECTED
+            </button>
           </div>
-          <div className='w-[400px]'>
-            <img src={carwithmobile} />
+
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img className="w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] object-cover" src={carwithmobile} alt="Car Inspection" />
           </div>
+
         </div>
       </div>
 
       {/* Borwser Video */}
-      <h1 className="container mx-auto px-4 flex justify-start font-bold text-3xl p-5">Browse Our Videos</h1>
-
-      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <h1 className="container mx-auto px-20 flex justify-start font-bold text-3xl m-10">Browse Our Videos</h1>
+      <div className="container mx-auto px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <iframe className="w-full h-[250px] md:h-[350px] lg:h-[400px]"
           src="https://www.youtube.com/embed/jziuHVZC5N8"
           title="Place your bid now &amp; drive your dream car."
@@ -488,18 +478,16 @@ function App() {
           frameBorder="0" allowFullScreen></iframe>
       </div>
 
-
-
       {/* our payment method */}
-      <div className='container mx-auto px-4'>
+      <div className='container mx-auto px-20 text-center'>
         <h1 className="container mx-auto px-4 text-left font-bold text-3xl py-5 mt-10">
           Our Payment Partners
         </h1>
-        <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-5 mb-20">
+        <div className="container mx-auto px-4 text-center grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-5 mb-20">
           {payment.map((data, index) => (
             <div
               key={index}
-              className="ml-20 bg-gray-100 shadow-lg rounded-2xl flex flex-col items-center justify-center p-6 w-32 h-32 md:w-40 md:h-40"
+              className="bg-gray-100 shadow-lg rounded-2xl flex flex-col items-center justify-center p-6 w-32 h-32 md:w-40 md:h-40"
             >
               <img className="w-20 h-20 md:w-24 md:h-24 object-contain" src={data.image} alt={data.title} />
             </div>
@@ -511,10 +499,13 @@ function App() {
 
       <div
         style={{ backgroundImage: `url(${gradient})` }}
-        className="relative h-44 bg-cover bg-center flex justify-around items-center text-white px-6"
+        className="relative h-auto bg-cover bg-center flex flex-wrap justify-center md:justify-around items-center text-white px-6 py-4"
       >
         {gardientIcon.map((data, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
+          <div
+            key={index}
+            className="flex flex-col items-center text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2"
+          >
             <img className="w-[70px] h-[70px] mb-2" src={data.image} alt="icon" />
             <h1 className="text-lg font-bold">{data.title}</h1>
             <p className="text-sm">{data.desc}</p>
@@ -522,14 +513,15 @@ function App() {
         ))}
       </div>
 
+      {/* Footer */}
 
       <div className="bg-gray-100 py-10 px-6">
         {/* Newsletter Section */}
-        <div className="flex justify-around items-center  max-w-5xl mx-auto text-center bg-white p-6 rounded-lg shadow">
+        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row  justify-around items-center  max-w-5xl mx-auto text-center bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-black">
             Subscribe to our <span className="text-red-600">Newsletter</span>
           </h2>
-          <div className="mt-4 flex justify-center shadow-1xl">
+          <div className="mt-4 flex flex-col gap-2 sm:flex-col md:flex-row lg:flex-row justify-center shadow-1xl">
             <input
               type="email"
               placeholder="Enter your email address"
@@ -542,7 +534,7 @@ function App() {
         </div>
 
         {/* Footer Links */}
-        <div className="max-w-6xl mx-auto mt-10 grid grid-cols-4 gap-6 text-gray-700">
+        <div className="max-w-6xl mx-auto mt-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-6 text-gray-700">
           {/* Column 1 */}
           <div>
             <h3 className="text-2xl font-bold mb-2">Company</h3>
